@@ -1,0 +1,40 @@
+﻿@model List<StudentManagement.Models.Domain.StudentModel>
+@{
+}
+<h2>List Of Student</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Class</th>
+            <th>DateOfBirth</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+            @foreach (var student in Model)
+            {
+                 <tr>
+
+                    <td>@student.ID</td>
+                    <td>@student.Name</td>
+                    <td>@student.Address</td>
+                    <td>@student.Phone</td>
+                    <td>@student.Email</td>
+                    <td>@student.Class</td>
+                    <td>@student.DateOfBirth</td>
+                <td><a href="Update/@student.ID" class="btn accordion-item">View</a></td>
+                    
+
+                 </tr>
+           
+            }
+     
+    </tbody>
+    
+</table>

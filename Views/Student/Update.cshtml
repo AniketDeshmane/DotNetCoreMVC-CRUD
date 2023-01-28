@@ -1,0 +1,38 @@
+﻿@model StudentManagement.Models.UpdateStudentModel
+@{
+}
+
+<h2>Update Student</h2>
+<form method="post" action="Add" class="mb-5">
+    <div class="mb-3">
+        <label for="ID" class="form-label">ID</label>
+        <input type="text" class="form-control" id="ID" asp-for="@Model.ID" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" asp-for="@Model.Name">
+    </div>
+    <div class="mb-3">
+        <label for="Address" class="form-label">Address</label>
+        <input type="text" class="form-control" id="Address" asp-for="@Model.Address">
+    </div>
+    <div class="mb-3">
+        <label for="Phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="Phone" asp-for="@Model.Phone">
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Email</label>
+        <input type="email" class="form-control" id="name" asp-for="@Model.Email">
+    </div>
+    <div class="mb-3">
+        <label for="Class" class="form-label">Class</label>
+        <input type="number" class="form-control" id="Class" asp-for="@Model.Class">
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">DateOfBirth</label>
+        <input type="date" class="form-control" id="name" asp-for="@Model.DateOfBirth">
+    </div>
+
+  <button type="Update" class="btn btn-primary" asp-action="Update">Update</button>
+    <button type="Delete" class="btn btn-danger" asp-controller="Student" asp-action="Delete">Delete</button>
+</form>
